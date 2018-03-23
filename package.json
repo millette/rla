@@ -1,0 +1,16 @@
+{
+  "name": "rla",
+  "version": "0.0.0",
+  "main": "yo.js",
+  "bin": ["cli.js"],
+  "license": "AGPL-3.0",
+  "scripts": {
+    "lint": "standard"
+  },
+  "dependencies": {
+    "got": "^8.3.0"
+  },
+  "devDependencies": {
+    "standard": "^11.0.1"
+  }
+}
