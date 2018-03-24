@@ -6,7 +6,7 @@ test('types', t => t.deepEqual(supportedTypes, ['css', 'js']))
 
 test('cdns', t => t.deepEqual(supportedCdns, ['jsdelivr', 'unpkg']))
 
-test('srilanka jsdelivr vega', async t => {
+test('srilinka jsdelivr vega', async t => {
   const name = 'vega'
   const cdn = 'jsdelivr'
   const [result] = await srilinka({ packages: [name], cdn })
@@ -18,7 +18,7 @@ test('srilanka jsdelivr vega', async t => {
   t.is(jsdelivr.type, 'js')
 })
 
-test('srilanka unpkg vega', async t => {
+test('srilinka unpkg vega', async t => {
   const name = 'vega'
   const cdn = 'unpkg'
   const [result] = await srilinka({ packages: [name], cdn })
@@ -30,7 +30,7 @@ test('srilanka unpkg vega', async t => {
   t.is(unpkg.type, 'js')
 })
 
-test('srilanka jsdelivr vega-tooltip', async t => {
+test('srilinka jsdelivr vega-tooltip', async t => {
   const name = 'vega-tooltip'
   const cdn = 'jsdelivr'
   const [result] = await srilinka({ packages: [name], cdn })
