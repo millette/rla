@@ -2,7 +2,7 @@
   "name": "srilinka",
   "version": "0.0.0",
   "main": "index.js",
-  "bin": ["cli.js"],
+  "bin": "cli.js",
   "description": "Generate SRI links for npm resources thru a CDN.",
   "repository": "millette/srilinka",
   "author": {
@@ -15,12 +15,17 @@
     "node": ">=8.10.0"
   },
   "scripts": {
-    "lint": "standard"
+    "lint": "standard",
+    "test": "standard && nyc ava",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
     "got": "^8.3.0"
   },
   "devDependencies": {
+    "ava": "^0.25.0",
+    "coveralls": "^3.0.0",
+    "nyc": "^11.6.0",
     "standard": "^11.0.1"
   }
 }
