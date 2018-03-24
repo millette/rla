@@ -1,9 +1,19 @@
 {
-  "name": "rla",
+  "name": "srilinka",
   "version": "0.0.0",
-  "main": "yo.js",
+  "main": "index.js",
   "bin": ["cli.js"],
+  "description": "Generate SRI links for npm resources thru a CDN.",
+  "repository": "millette/srilinka",
+  "author": {
+    "name": "Robin Millette",
+    "email": "robin@millette.info",
+    "url": "http://robin.millette.info"
+  },
   "license": "AGPL-3.0",
+  "engines": {
+    "node": ">=8.10.0"
+  },
   "scripts": {
     "lint": "standard"
   },
