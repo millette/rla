@@ -66,7 +66,7 @@ const getPackages = (cdn, { body }) => body.rows.map(({ id, value }) => {
 const u = new URL('https://skimdb.npmjs.com/registry/_design/app/_view/byField')
 
 // sha384 and sha256 can also be used
-const srilinka = ({ packages, cdn = 'unpkg', hash = 'sha512' }) => {
+const srilinka = ({ packages, cdn = 'unpkg', hash = 'sha512' } = {}) => {
   let err
   hash = hash.toLowerCase()
   const hashes = getHashes().map((x) => x.toLowerCase())
@@ -104,4 +104,4 @@ const srilinka = ({ packages, cdn = 'unpkg', hash = 'sha512' }) => {
     .then((x) => x.filter(Boolean))
 }
 
-module.exports = { srilinka, supportedCdns: Object.keys(cdnPaths), supportedTypes: Object.keys(supported) }
+module.exports = { srilinka, supportedCdns: Object.keys(cdnPaths).sort(), supportedTypes: Object.keys(supported).sort() }
