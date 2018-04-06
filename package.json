@@ -14,6 +14,11 @@
   "engines": {
     "node": ">=8.10.0"
   },
+  "keywords": [
+    "sri",
+    "html",
+    "cdn"
+  ],
   "scripts": {
     "lint": "standard",
     "test": "standard && nyc ava",
