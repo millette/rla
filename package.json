@@ -25,7 +25,7 @@
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
-    "got": "^8.3.0"
+    "got": "^9.5.0"
   },
   "devDependencies": {
     "ava": "^0.25.0",
