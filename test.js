@@ -11,10 +11,10 @@ test('srilinka jsdelivr vega', async t => {
   const cdn = 'jsdelivr'
   const [result] = await srilinka({ packages: [name], cdn })
   t.is(result.id, name)
-  t.is(result.version, '3.2.1')
+  t.is(result.version, '4.4.0')
   t.is(result.license, 'BSD-3-Clause')
   const jsdelivr = result.jsdelivr[0]
-  t.is(jsdelivr.integrity, 'sha512-RhgZ2MzuuqeiZCsjO78rKwermqTCaWkDlMtOOT2VbosRUY40RX4xY+Im6k7CxgAIRz1IWua7E/hQw22VSmUNkQ==')
+  t.is(jsdelivr.integrity, 'sha512-SrrDWjnhZdtyWsG1uE0UWonbdxlLt47J46RtfgYGlwLwAdBQuzYX9i0+uTzjyqILlRY1oVvnDDvNwtWRlD9yMA==')
   t.is(jsdelivr.type, 'js')
 })
 
@@ -23,10 +23,10 @@ test('srilinka unpkg vega', async t => {
   const cdn = 'unpkg'
   const [result] = await srilinka({ packages: [name], cdn })
   t.is(result.id, name)
-  t.is(result.version, '3.2.1')
+  t.is(result.version, '4.4.0')
   t.is(result.license, 'BSD-3-Clause')
   const unpkg = result.unpkg[0]
-  t.is(unpkg.integrity, 'sha512-RhgZ2MzuuqeiZCsjO78rKwermqTCaWkDlMtOOT2VbosRUY40RX4xY+Im6k7CxgAIRz1IWua7E/hQw22VSmUNkQ==')
+  t.is(unpkg.integrity, 'sha512-SrrDWjnhZdtyWsG1uE0UWonbdxlLt47J46RtfgYGlwLwAdBQuzYX9i0+uTzjyqILlRY1oVvnDDvNwtWRlD9yMA==')
   t.is(unpkg.type, 'js')
 })
 
@@ -35,12 +35,13 @@ test('srilinka jsdelivr vega-tooltip', async t => {
   const cdn = 'jsdelivr'
   const [result] = await srilinka({ packages: [name], cdn })
   t.is(result.id, name)
-  t.is(result.version, '0.7.0')
+  t.is(result.version, '0.14.0')
   t.is(result.license, 'BSD-3-Clause')
   const [js, css] = result.jsdelivr
-  t.is(js.integrity, 'sha512-opOIMRBcu8K87y0JQRjNu+dh2hUk8vtaxm+gi/5/JlwbNpSWxjL6PR6h/HLjB5NquZs5lonCr89bVoKSf/+DzQ==')
+
+  t.is(js.integrity, 'sha512-F3dQV2erE+qyktrt25B/QJrPpqgN3EgzLBMyypalzN/NFLQwWOajYwYnWVWgmHGgGFVCwiopoZXOVJmVirJkZQ==')
   t.is(js.type, 'js')
-  t.is(css.integrity, 'sha512-UVNKIlG1I6FEO6sK4O5maQ3io2w3mlhkxUv9Y9Sr0Go1MA+mrRHrJh83d+Dlafxt6RxU3hTsp5yJYAFHx5/n6w==')
+  t.is(css.integrity, 'sha512-4jy3EXFlpzzKw6zq4OKKh+scrgo4p/t96SBLsne2v9mBLZhduHFChFg5KZ9f1Y8mJq1NicRMb34bMyHZARiemw==')
   t.is(css.type, 'css')
 })
 
