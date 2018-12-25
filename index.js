@@ -56,7 +56,7 @@ const getPackages = (cdn, { body }) => body.rows.map(({ id, value }) => {
   const { version, description, license } = value
   const cdnFiles = [value[cdn]]
   // TODO: add more exceptions...
-  if (id === 'vega-tooltip') { cdnFiles.push('build/vega-tooltip.min.css') }
+  if (id === 'vega-tooltip') { cdnFiles.push('vega-tooltip.min.css') }
   const ret = { id, version, description, license }
   ret[cdn] = cdnFiles
   return ret
