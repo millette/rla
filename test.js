@@ -45,7 +45,7 @@ test('srilinka jsdelivr vega-tooltip', async t => {
   t.is(css.type, 'css')
 })
 
-test('error, bad packages', async t => t.throws(srilinka(), 'Packages should be an array of strings.'))
-test('error, bad pkg#2', async t => t.throws(srilinka({ packages: [true] }), 'Packages should be an array of strings.'))
-test('error, bad cdn', async t => t.throws(srilinka({ packages: ['vega'], cdn: 'bob' }), 'CDN not supported.'))
-test('error, bad hash', async t => t.throws(srilinka({ packages: ['vega'], hash: 'bob' }), 'Hash not supported.'))
+test('error, bad packages', async t => t.throwsAsync(srilinka(), 'Packages should be an array of strings.'))
+test('error, bad pkg#2', async t => t.throwsAsync(srilinka({ packages: [true] }), 'Packages should be an array of strings.'))
+test('error, bad cdn', async t => t.throwsAsync(srilinka({ packages: ['vega'], cdn: 'bob' }), 'CDN not supported.'))
+test('error, bad hash', async t => t.throwsAsync(srilinka({ packages: ['vega'], hash: 'bob' }), 'Hash not supported.'))
