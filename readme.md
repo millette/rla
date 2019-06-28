@@ -4,6 +4,9 @@
 [![Dependency Status](https://gemnasium.com/badges/github.com/millette/srilinka.svg)](https://gemnasium.com/github.com/millette/srilinka)
 > Generate SRI links for npm resources thru a CDN.
 
+## CURRENTLY BROKEN
+*`skrlinka` hasn't kept up with the changes at npmjs.com and is thus currently in a broken state.*
+
 ## Install
 ```
 $ npm install --save srilinka
